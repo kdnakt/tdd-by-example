@@ -8,4 +8,7 @@ class Money {
         return amount == m.amount
             && getClass().equals(m.getClass());
     }
+    static Dollar dollar(int amount) {
+        return new Dollar(amount);
+    }
 }
