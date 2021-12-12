@@ -1,14 +1,15 @@
 package money;
 
-class Money {
+abstract class Money {
     protected int amount;
+    abstract Money times(int multiplier);
     @Override
     public boolean equals(Object o) {
         Money m = (Money) o;
         return amount == m.amount
             && getClass().equals(m.getClass());
     }
-    static Dollar dollar(int amount) {
+    static Money dollar(int amount) {
         return new Dollar(amount);
     }
 }
