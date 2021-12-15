@@ -17,7 +17,7 @@ class Money {
     public boolean equals(Object o) {
         Money m = (Money) o;
         return amount == m.amount
-            && getClass().equals(m.getClass());
+            && currency().equals(m.currency());
     }
     @Override
     public String toString() {
