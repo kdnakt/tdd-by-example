@@ -13,6 +13,10 @@ class Money implements Expression {
     Expression plus(Money addend) {
         return new Sum(this, addend);
     }
+    @Override
+    public Money reduce(String to) {
+        return this;
+    }
     String currency() {
         return currency;
     }
